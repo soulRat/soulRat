@@ -3,6 +3,13 @@ Jeecg-Boot 低代码开发平台
 
 当前最新版本： 3.0（发布日期：2021-11-01）
 
+## 启动
+
+- 先安装node和yarn， node10以上
+- jeecg-boot-webapp目录执行: `yarn && yarn build` 编译前端项目
+- 根目录先执行: `mvn clean package -DskipTests`
+- 运行 `org.jeecg.JeecgSystemApplication` 启动服务端项目
+- 访问 `http://localhost:8080` 进入管理页面
 
 ## 后端技术架构
 - 基础框架：Spring Boot 2.3.5.RELEASE
