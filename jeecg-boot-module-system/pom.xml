@@ -10,6 +10,10 @@
 
 	<artifactId>jeecg-boot-module-system</artifactId>
 
+	<properties>
+		<vue.dist.dir>${basedir}/../jeecg-boot-webapp/dist</vue.dist.dir>
+	</properties>
+
 	<repositories>
 		<repository>
 			<id>aliyun</id>
@@ -68,6 +72,34 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<!-- Vue打包后目录 -->
+			<resource>
+				<directory>${vue.dist.dir}</directory>
+				<targetPath>static</targetPath>
+				<includes>
+					<include>**</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+			<!-- 本项目相关配置文件 -->
+			<resource>
+				<directory>src/main/webapp</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.json</include>
+					<include>**/*.ftl</include>
+				</includes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
