@@ -38,6 +38,7 @@
 			<groupId>org.jeecgframework.boot</groupId>
 			<artifactId>jeecg-system-local-api</artifactId>
 		</dependency>
+
 		<!-- jeewx api -->
 		<dependency>
 			<groupId>org.jeecgframework</groupId>
